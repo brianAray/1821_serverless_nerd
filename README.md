@@ -2,7 +2,7 @@
 
 This is the training repository for the Serverless NERD cohort starting on September 11th, 2023. All of the notes, demos, study guides, project guidelines, and other resources will be found here.
 
-## Installation
+## Installation Guide
 
 For training, we will need the following:
 
