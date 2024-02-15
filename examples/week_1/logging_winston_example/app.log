@@ -1,0 +1,41 @@
+2024-02-15T16:35:13.426Z [info]: This is an info message
+2024-02-15T16:35:13.432Z [error]: This is an error message
+2024-02-15T16:35:13.432Z [warn]: This is a warning message
+2024-02-15T16:37:14.283Z [info]: This is an info message
+2024-02-15T16:37:14.288Z [error]: This is an error message
+2024-02-15T16:37:14.289Z [warn]: This is a warning message
+2024-02-15T16:37:14.290Z [error]: An error occurred This is an error!
+2024-02-15T16:39:14.640Z [info]: This is an info message
+2024-02-15T16:39:14.644Z [error]: This is an error message
+2024-02-15T16:39:14.645Z [warn]: This is a warning message
+2024-02-15T16:39:14.645Z [error]: An error occurred This is an error!
+2024-02-15T16:41:51.280Z [error]: 
+                This is an error message
+            
+2024-02-15T16:41:51.275Z [info]: This is an info message
+2024-02-15T16:41:51.281Z [error]: 
+                An error occurred This is an error!
+            
+2024-02-15T16:41:51.280Z [warn]: This is a warning message
+2024-02-15T16:42:30.128Z [info]: This is an info message
+2024-02-15T16:42:30.133Z [error]: 
+                This is an error message
+            
+2024-02-15T16:42:30.134Z [warn]: This is a warning message
+2024-02-15T16:42:30.135Z [error]: 
+                An error occurred:
+    Error: This is an error!
+  
+            
+2024-02-15T16:42:50.625Z [error]: 
+                This is an error message
+            
+2024-02-15T16:42:50.620Z [info]: This is an info message
+2024-02-15T16:42:50.626Z [error]: 
+                An error occurred: Error: This is an error!
+            
+2024-02-15T16:42:50.626Z [warn]: This is a warning message
+2024-02-15T16:43:08.383Z [info]: This is an info message
+2024-02-15T16:43:08.389Z [error]: This is an error message
+2024-02-15T16:43:08.390Z [warn]: This is a warning message
+2024-02-15T16:43:08.391Z [error]: An error occurred: Error: This is an error!
