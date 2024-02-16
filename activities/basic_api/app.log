@@ -1,0 +1,21 @@
+2024-02-16T16:42:16.421Z [info]: Added item: [object Object]
+2024-02-16T16:51:36.900Z [info]: Calculating total cost: Total Cost $0
+2024-02-16T16:51:44.955Z [info]: Added item: Cheese
+2024-02-16T16:51:45.796Z [info]: Added item: Cheese
+2024-02-16T16:51:46.552Z [info]: Added item: Cheese
+2024-02-16T16:51:51.784Z [info]: Calculating total cost: Total Cost $0
+2024-02-16T16:52:02.006Z [info]: Toggle Purchased: Cheese: true
+2024-02-16T16:52:09.436Z [info]: Calculating total cost: Total Cost $01.0000
+2024-02-16T16:52:37.629Z [info]: Calculating total cost: Total Cost $0
+2024-02-16T16:52:40.100Z [info]: Added item: Cheese
+2024-02-16T16:52:44.648Z [info]: Added item: Milk
+2024-02-16T16:52:46.171Z [info]: Added item: Milk
+2024-02-16T16:52:54.759Z [info]: Removed Item: Milk
+2024-02-16T16:53:04.555Z [error]: Failed toggled purchase: Index - 2
+2024-02-16T16:53:15.251Z [info]: Toggle Purchased: Milk: true
+2024-02-16T16:53:26.729Z [info]: Calculating total cost: Total Cost $01.00
+2024-02-16T16:54:38.504Z [info]: Calculating total cost: Total Cost $0
+2024-02-16T16:54:57.391Z [info]: Added item: Bread
+2024-02-16T16:54:58.421Z [info]: Added item: Bread
+2024-02-16T16:54:58.597Z [info]: Added item: Bread
+2024-02-16T16:55:01.533Z [info]: Calculating total cost: Total Cost $0

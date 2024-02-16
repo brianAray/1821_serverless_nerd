@@ -1,0 +1,2 @@
+2024-02-16T16:53:04.555Z [error]: Failed toggled purchase: Index - 2
+2024-02-16T16:53:26.729Z [error]: Uncaught Exception: TypeError: totalCost.toFixed is not a function
