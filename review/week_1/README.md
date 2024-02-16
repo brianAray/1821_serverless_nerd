@@ -1,0 +1,414 @@
+# Week 1 Review
+- Installation
+    - VSCode: text editor for writing text and code
+    - Git Bash: when we install git, we also get with it a bash terminal
+        - Git: version control system
+        - Bash: shell for interpreting commands that we type in and having the OS understand what to do
+    - Node.js: JavaScript runtime for running JavaScript outside of web browsers (running JS in web browsers was the original way of using JS)
+- Operating System
+    - Is the piece of software that allows users to interact with the computer hardware
+    - It provides a layer of abstraction to manage and allocate resources to different applications
+    - It provides the ability to translate periphal usage (such as keyboard, mouse, etc.) to actual actions on the computer
+    - Common OSes: Linux, Mac, Windows
+        - Linux: the most common operating system for servers
+        - Mac: OS for Apple computers (unix-based OS)
+            - Both Linux and Mac use the same style commands because Linux is inspired by Unix (even though they are different OSes from each other)
+        - Windows is based on an entirely different system (Windows NT Kernel)
+            - This is why Windows command prompt, for instance, has a different set of commands than what Linux or Mac use
+            - But because we install a bash terminal to our OS, we are able to make use of Linux commands
+- Linux-style file commands [Detailed notes](https://github.com/230109training/training/tree/main/notes/week_1/unix_commands)
+    - `ls`
+        - Will list files and other directories inside the current directory
+        - `-l flag`: used to list additional information about each file or directory
+        - `-a flag`: used to list hidden files and folders
+    - `pwd`
+        - Is used to see what directory we are currently working within in the terminal
+    - `cd`
+        - Used to move to other folders
+        - Special symbols
+            - `.`: represents the current folder
+            - `..`: represents the parent folder
+        - Example
+            - `cd some_folder`: go into the some_folder directory that is inside the current working directory
+            - `cd ..`: go up to the parent folder
+            - `cd ../..`: go up 2 folders
+            - `cd ~`: go to the home folder
+    - `touch`
+        - Used to create a blank file
+            - `touch my_file.txt`
+    - `cp`
+        - Create a copy of a file
+            - `cp basic_text.txt basic_text_copy.txt`
+    - `rm`
+        - Delete a file
+            - `rm basic_text_copy.txt`
+        - Delete a folder
+            - `rm -r some_folder/`
+    - `mv`
+        - Used to either move a file to another folder or to rename a file
+        - Renaming a file
+            - `mv basic_text.txt renamed_file.txt`
+        - Moving a file
+            - `mv basic_text.txt ../basic_text.txt`
+    - `mkdir`
+        - Make a directory
+            - `mkdir some_folder`
+- Git
+    - Git is a version control system used for keeping track of the state of a project
+    - Git revolves around the concept of `commits`, which are basically sequential versions of the project
+        - Each commit has the current files for the project
+        - We can decide to revert to a previous commit if we don't like the current version, because the entire history of the project is backed up
+    - A repository represents all of the files and folders for a project
+        - Local repository: this is what is on your own computer and all of the other developers working on their computers on the same project
+        - Remote repository: a repository in a centralized location on the internet, for example Github
+        - Developers will push changes made in their local repositories to the remote repository, and the other developers will update their local repositories by pulling changes from the remote repository to their local repository
+    - Git workflow
+        - 1. Creating a local repository
+            - `git init`: used to create a local repository from scratch
+            - `git clone`: used to create a local repository IF there is already a project in a remote repository (you are cloning an existing project onto your computer)
+        - 2. Once you already have a local repository, work on the files (write code, make changes, etc.)
+        - 3. When you're done making changes
+            - `git add`: used to add a modified or new file to the "staging area" of the local Git repository
+            - `git commit`: used to create a commit based on the files that have been added to the "staging area"
+        - 4. After committing
+            - `git push <remote name> <branch name>`: push the commit to the remote repository
+            - What if you have not yet configured the remote repository that you need to push to?
+                - `git remote add <remote name> <link>`
+        - 5. Repeat step 2 through 4
+- Data Structures and Algorithms
+    - Data structures represent the different ways in which we can store data in our programs (temporary storage)
+        - Arrays
+        - Stacks
+        - Queues
+        - Linked Lists
+    - Algorithms
+        - Step by step procedures to solve a problem or accomplish a task
+        - Anything (code) you write is technically an algorithm
+        - Common algorithms
+            - Search algorithms: searching for a value in a data structure
+                - Linear search O(n)
+                - Binary search O(log n)
+            - Sorting algorithms: sorting unsorted data into an order (such as least to greatest or greatest to least)
+                - Bubble Sort O(n^2)
+                - Insertion Sort O(n^2)
+                - Selection Sort O(n^2)
+                - Merge Sort O(n log n)
+                - Quick Sort O(n log n)
+                - TimSort O(n log n)
+        - The performance of an algorithm can be quantified objectively using "Big O Notation" for both time complexity and space complexity
+            - Time complexity: how long an algorithm takes to complete based on given inputs to the algorithmm
+            - Space complexity: how much space an algorithm requires based on given inputs to the algorithm
+            - Big O
+                - Dropping constants, dropping coefficients, dropping "less powerful" terms
+                - The dominant term is what is written down to represent an algorithm's performance
+                - O(1): Best
+                - O(log n): Really Good
+                - O(n): Good
+                - O(n log n): OK
+                - O(n^2): Bad
+                - O(n^3): Really Bad
+                - O(2^n): SUPER DUPER BAD
+                - O(n!): INFINITELY BAD
+- JavaScript Fundamentals
+    - JavaScript Introduction
+        - Functional programming language: functions can be passed around as arguments, returned from functions, assigned to variables
+            - Allows us to utilize "functional programming" as a paradigm
+        - Object-oriented: utilize objects that contain properties and behaviors (methods)
+        - Single-threaded: JS uses a single-threaded approach that can still be non-blocking via asynchronous operations. Usually, callback functions play a big role in asynchronous programming
+        - Cross-platform: Originally, JS was designed to run in web browsers, but with Node.js, we can finally develop JS apps outside of the web browser. Node.js is what brought along the world of server-sided JS.
+        - Dynamic and weakly typed
+            - Dynamic means the type of variable can change
+            - Weakly means we don't need to specify the type of a variable
+    - Naming conventions
+        - Constants should generally be named with UPPER_CASE_LIKE_THIS
+        - Variables should be named using camelCase
+        - Functions should be named using camelCase
+        - Classes and function constructors should be named using PascalCase
+    - Datatypes
+        - string
+            - Types of string literals
+                - `'string'`
+                - `"string"`
+                - template literals (``), ${} <- evaluating expressions inside the template literal
+        - number
+        - boolean
+        - undefined
+        - null
+        - object
+    - Assignment Operators
+        - `=`
+        - `+=`
+        - `-=`
+        - `*=`
+        - `/=`
+        - `%=`
+        - `**=`
+    - Arithmetic Operators
+        - `+`
+        - `-`
+        - `*`
+        - `/`
+        - `%`
+        - `**`
+        - These operators follow PEMDAS
+            - Parentheses first
+            - Exponentials second
+            - Multiplication and division third
+            - Addition and subtraction fourth
+    - Comparison Operators
+        - `==`
+        - `===`
+        - `!=`
+        - `!==`
+        - `>`
+        - `>=`
+        - `<`
+        - `<=`
+    - Logical Operators
+        - `&&`: and
+        - `||`: or
+        - `!`: not
+    - Type Coercion
+        - Automatic conversion from one type to another
+        - '5' == 5
+        - +'5'
+        - if (10) { }
+        - '5' + 3 -> '53'
+        - Truthy/Falsy Values
+            - Everything is Truthy except...
+                - 0 (Falsy)
+                - undefined (Falsy)
+                - null (Falsy)
+                - '' (Falsy)
+                - NaN (Falsy)
+            - Make sure you understand the concept of truthy and falsy, especially whenever you check if a variable is undefined or null, for example
+            - You don't need to explicitly write out a check for null or undefined
+    - Functions
+        - Functions are blocks of code that can be re-used and called over and over to perform some task
+        - We can pass arguments into functions, which have variables that can be defined known as parameters that map to those arguments
+        - We can also return values from a function, so that when the function completes, we can output data from that function
+        - Types of functions
+            - named functions
+                - `function someFunction() {}`
+            - anonymous functions
+                - `function() {}`
+            - arrow functions
+                - `() => {}`
+                - Arrow functions are a little bit different than named functions or anonymous functions in that they inherit the this keyword from the surrounding scope in which the arrow function was defined. Named functions and anonymous functions, on the other hand, receive their this keyword from the object in which the function was invoked
+        - Default parameters
+            - We can define default values for parameters in a function so that if an argument is not passed in for that parameter, the parameter will take the default value
+            - `function myFunction(x = 10, y = 20) { }`
+    - Variable Scopes
+        - Refer to the availability of a variable to be accessed
+        - 3 different types of scopes
+            - Global scope
+                - A variable has been declared outside of any function or block of code
+                - `var`, `let`, `const`
+                - Any functions or blocks of code can access global scoped variables, as well as code directly in the global scope
+            - Function scope
+                - A variable declared within a function
+                - `var`, `let`, `const`
+                - Any blocks of code within that function can access the function scoped variable, as well as code directly in the function scope
+            - Block scope
+                - A variable declared within a block of code (except var, because var does not support block scope)
+                - `let` and `const`
+                - Code within that block can access the block scoped variable
+        - Var v. Let v. Const
+            - Var can only support global scope and function scope
+                - If you declare a var variable inside of a block, it CANNOT be block scoped
+            - Let and const can both support block scope (as well as global and function scope)
+                - The different between const and let is that let can be re-assigned new values, while const cannot be re-assigned
+                - Both let and const were introduced in ES6 (ECMAScript 6 aka ECMAScript 2015)
+    - Arrays
+        - Arrays in JS are dynamic in size
+        - Items in an array are indexed
+            - Starts at 0
+            - Goes up to array.length - 1
+        - Common methods
+            - `.push(element)`: add to end
+            - `.unshift(element)`: add to beginning
+            - `.pop()`: removes element from end and returns removed element
+            - `.shift()`: removes element from beginning and returns removed element
+    - Control flow
+        - If - else if - else
+            - If: Used to execute code if a condition is met
+            - Else-if: used for the same purpose if the if condition wasn't met
+                - We can use multiple else-ifs so that it will keep going down the else-if chain until there's something true
+            - Else: used as a last resort to execute some code if everything was false
+            - Configurations
+                - We can do if by itself
+                - We can do if - else
+                - We can do if - else if
+                - We can do if - else if - else if
+                - We can do if- else if - else if - else if - else
+                - etc...
+        - Switch
+            - Switch is used to execute a "case" of code if the case matches the value of some variable
+                - `switch(someVariable) { case "someValue": ... break; }
+                - Use a `break` keyword at the end of each case to prevent "fall-through" of execution to subsequent cases
+        - Loops
+            - For loop
+                - `for (initialization; condition; increment/decrement) {}`
+                - `for (let i = 0; i < 100; i++) {}`
+                - `for (let i = arr.length - 1; i >= 0; i--) {}`
+            - While loop
+                - `while (condition) {}`
+                - While some condition is true, the while loop will run
+            - Do - while loop
+                - `do { } while (condition);`
+                - Do-while loop will ALWAYS execute at least once, because the condition is evaluated at the end
+            - Other keywords
+                - `break`: this will break out of the loop
+                - `continue`: end the current iteration through the loop and continue onto the next iteration
+    - Objects
+        - Collections of key-value pairs
+            - Each key-value pair is referred to as a "property"
+        - Objects provide a way to "encapsulate" data and behaviors into a single unit
+        - We can access individual values using
+            - dot notation
+                - `myObj.age`
+            - square bracket notation
+                - `myObj['age']`
+        - We can also create new properties even after an object has already been created
+            - `myObj.newProperty = 'my new property'`
+        - An object can also have properties which are also objects
+            - `myObj.property1 = { prop1: 20, prop2: 35 }`
+        - An object can have properties that are functions
+            - `myObj.someFunc = function() {}`
+        - Ways to create objects
+            - Object literals (`{}`)
+                - `{ name: 'Bach', age: 25, favoriteColor: 'blue' }`
+            - Function constructors
+                - `new` keyword to create object from function constructor
+                ```javascript
+                function Person(name, age, favoriteColor) { 
+                    this.name = name; 
+                    this.age = age; 
+                    this.favoriteColor = favoriteColor; 
+                }
+
+                Person.prototype.greet = function() {
+                    // ...
+                }
+                ```
+            - Classes
+                - `new` keyword to create object from class
+                ```javascript
+                class Person { 
+                    constructor(name, age, favoriteColor) { 
+                        this.name = name; 
+                        this.age = age; 
+                        this.favoriteColor = favoriteColor; 
+                    }
+                    
+                    function greet() {
+                        // ...
+                    }
+                }
+                ```
+    - JSON
+        - Stands for JavaScript Object Notation
+        - Data interchange format that is language agnostic. As long as a programming language has a library for parsing JSON, then we can utilize JSON with that language
+        - Normally, JSON is used to transmit data over the internet via the HTTP protocol
+        - JSON v. JS objects
+            - keys in JSON must be surrounded by double quotes ""
+        - JSON.stringify() and JSON.parse
+            - JSON.stringify(obj): used to convert an object in JS into a JSON string
+            - JSON.parse(jsonString): used to convert a JSON string into a JS object
+- Node.js
+    - JavaScript runtime primarily used for running server-sided applications
+    - Commes with a built-in extensive number of modules, such as the `fs` module for dealing with files, `http` module for creating an HTTP server, etc.
+    - Comes with npm (Node Package Manager), which is the standard way for creating a Node project and installing third-party libraries that we can utilize while developing an application
+        - Important files/directories for node projects
+            - `package.json` file: it is the master file for a node project. It contains a list of scripts that can be ran, a list of the names of dependencies that the project needs, and also the devDependencies that used during development
+            - `package-lock.json` file: it is the file that contains the exact versions of all dependencies that are required. This includes not only the dependencies that we directly installed, but also the dependencies of those dependencies. This is an important file as well, because it allows for other developers that we share the project with to be able to install the exact same versions on their machines
+            - `node_modules` folder: contains all of the dependencies that need to be installed for the project to run properly. This folder can be a huge folder, so it is recommended to NOT include this folder in the Git repository, as it can make the repository extremely bloated in terms of space. Therefore, the node_modules folder should be ignored inside of the `.gitignore` file
+        - Npm Commands
+            - `npm init`: used to help us initialize a new node project (and creates the package.json file for us)
+            - `npm install`: This will go and install all required dependencies by scanning the package.json and/or the package-lock.json file. So, when another developer needs to have the dependencies, they just need to run this command (or if you delete the node_modules folder, you can get it back this way)
+            - `npm install <dependency name>`: Allows us to install a new dependency and include it into our package.json and package-lock.json files
+            - `npm install <dependency name> --save-dev`: Allows us to install a new developer dependency (a dependency that is only required during development and is not required for the actual application to run)
+            - `npm uninstall <dependency name>`: uninstall a dependency that is no longer needed
+    - Module importing / exporting
+        - To import a module, we use the `require(...)` function
+            - 3 different types of imports
+                - Node module imports
+                    - require('fs')
+                    - require('http')
+                    - etc.
+                - Npm package imports
+                    - require('express')
+                - Local module imports
+                    - Requires us to use `module.exports` to make something available to another file to be imported
+                        - `module.exports` is the special object that actually gets imported by the other file
+                    - To import the module.exports from another file
+                        - `require('./filename')`
+                        - `require('../filename')`
+                        - What you put for the path depends on where the file actually is (it could be in another folder, for example)
+- HTTP
+    - HTTP is a common protocol used for transmitting information over the internet
+    - Communication starts with the client
+        - A client must first send a request to the server
+        - Once the server receives the request, it will process the request and send back a response
+    - HTTP Request
+        - HTTP method (GET, POST, PUT, DELETE)
+        - URL (ex. /grocery)
+        - Request Body
+            - Usually contains JSON, but can really contain anything
+        - Request Headers
+            - Metadata structured in key-value pairs
+            - Most common header is Content-Type to indicate what type of data is in the request body
+                - ex. `Content-Type: application/json`
+    - HTTP Response
+        - Status Code: indicate whether a request was successfully processed or not
+            - 100s: informational
+            - 200s: success
+            - 300s: redirect
+            - 400s: client-sided error
+            - 500s: server-sided error
+        - Response Body
+            - Usually contains JSON, but can be anything, such as HTML, CSS, etc.
+        - Response Headers
+            - Metadata structured in key-value pairs
+            - Most common header is Content-Type
+                - ex. `Content-Type: application/json`
+- Logging
+    - Keeping a log / audit-trail of different events that happen in an application
+    - Sufficiently detailed logging would give indications as to whether the system/application is functioning properly or not
+    - We can utilize a logging framework such as Winston to help us output information to different targets
+        - This is done through Winston "transports"
+            - Examples
+                - Console transport (to output to the console)
+                - File transport (to output to a file)
+                - Database transports (to output to a database)
+                - etc.
+    - Logging levels (most severe to least severe)
+        - error
+        - warn
+        - info
+        - http
+        - verbose
+        - debug
+        - silly
+    - We can configure a logger to output only a certain level (and more severe levels)
+        - ex. if we configure a logger to the `info` level, it will log only info, warn, and error messages
+- Unit Testing
+    - Unit testing is testing individual functions/granular sections of code
+        - We are not trying to test the entire system together
+        - Unit testing is designed to catch issues with individual pieces of logic
+        - Sometimes mocking is required because in order to be a unit test, you don't want for the function you're testing to call other functions (because then it will no longer be a unit test at that point)
+    - In JavaScript, we can utilize a testing library known as `jest`
+        - Jest was originally designed by Facebook for testing frontend React applications
+        - However, this was later made available for testing any type of JS project
+        - Jest supports a lot of features such as mocking in addition to basic test organization + assertion functionality + hooks
+    - AAA pattern
+        - Arrange: set up whatever it is that you want to test
+            - ex. making the function being tested available within the test file
+        - Act: actually executing the thing being tested
+            - ex. invoking the function
+        - Assert: checking to see if what the function returned is equal to what would be expected for that function to actually output
+            - ex. `expect(...).toBe(...)`
+                - Keep in mind, `toBe` should only be used with primitives (such as strings, numbers, booleans)
+                - `toEqual` will be what you want to use when comparing objects
+    - Code Coverage: how many lines of code are actually being executed when you run the test cases
+        - If we have a function that we're testing with a bunch of if statements, for example, we will want to make sure we're covering all conditions by having a variety of test cases
