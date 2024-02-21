@@ -1,0 +1,8 @@
+2024-02-21T16:07:56.254Z [info]: Incoming request
+2024-02-21T16:07:56.263Z [info]: Hello!
+2024-02-21T16:09:09.505Z [info]: Incoming request [object Object]
+2024-02-21T16:09:20.477Z [info]: Incoming request [object Object]
+2024-02-21T16:10:25.360Z [info]: Incoming POST : /
+2024-02-21T16:10:38.209Z [info]: Incoming POST : /items
+2024-02-21T16:15:17.837Z [info]: Incoming POST : /items
+2024-02-21T16:15:44.271Z [info]: Incoming POST : /items
