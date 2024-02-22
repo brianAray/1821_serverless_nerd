@@ -57,6 +57,10 @@ app.get("/protected", authenticateToken, (req, res) => {
   res.json({ message: "Protected Route Accessed", user: req.user });
 });
 
+app.get("/admin-protected", authenticateAdminToken, (req, res) => {
+  res.json({ message: "Admin Route Accessed", user: req.user });
+});
+
 function authenticateToken(req, res, next) {
   const authHeader = req.headers["authorization"];
   const token = authHeader && authHeader.split(" ")[1];
@@ -75,6 +79,26 @@ function authenticateToken(req, res, next) {
     next();
   });
   // next();
+}
+
+function authenticateAdminToken(req, res, next) {
+  const authHeader = req.headers["authorization"];
+  const token = authHeader && authHeader.split(" ")[1];
+
+  if (!token) {
+    res.status(401).json({ message: "Unauthorized Access" });
+    return;
+  }
+
+  jwt.verify(token, secretKey, (err, user) => {
+    console.log(user.role);
+    if (err || user.role !== "admin") {
+      res.status(403).json({ message: "Forbidden Access" });
+      return;
+    }
+    req.user = user;
+    next();
+  });
 }
 
 app.listen(PORT, () => {
