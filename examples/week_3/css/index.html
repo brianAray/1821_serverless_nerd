@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--Inline Internal and External stylesheets-->
+  <head>
+    <title>CSS Example</title>
+    <!-- Internal
+        - This is a stylesheet defined within the HTML docuemnt's <head> using a <style> tag
+        - Allows you to apply styles to multiple elements within the same HTML doc
+        - Internal Stylesheets ar euseful when you want to keep styles to a specific page
+    -->
+    <style>
+      p {
+        font-family: "Courier New", Courier, monospace;
+        color: green;
+        font-size: 20px;
+      }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <!-- inline 
+        - Inline styles are applied directly to individual html elements using the style attribute
+        - Useful for adding unique or specific styles to an element
+        - Have the highest specificity, which means they override other styles
+        - Not recommended for styling entire web pages as they make your html code less maintainable
+    -->
+
+    <p style="color: blue; font-size: 16px">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, fuga?
+    </p>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, nihil.
+    </p>
+
+    <h1>Lorem, ipsum.</h1>
+    <h2>Lorem, ipsum.</h2>
+    <h3>Lorem, ipsum.</h3>
+    <h4>Lorem, ipsum.</h4>
+    <h5>Lorem, ipsum.</h5>
+    <h6>Lorem, ipsum.</h6>
+
+    <button class="button_class button_class2">Click Me!</button>
+    <button id="unique_button" class="button_class">Click Me!</button>
+    <button class="button_class2">Click Me!</button>
+
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li class="highlight">Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
+
+    <input type="text">
+    <input type="button">
+
+    <img src="https://th-thumbnailer.cdn-si-edu.com/ii_ZQzqzZgBKT6z9DVNhfPhZe5g=/fit-in/1600x0/filters:focal(1061x707:1062x708)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer_public/55/95/55958815-3a8a-4032-ac7a-ff8c8ec8898a/gettyimages-1067956982.jpg">
+    
+  </body>
+</html>

@@ -1,0 +1,139 @@
+/* 
+    External
+
+    These are separate stylesheets with the .css extension that is linked to the HTML document through the <link> tag
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    External stylesheets allow you to centralize your styles and apply them consistently across multiple web pages
+
+    They promote maintainability and reusability of styles
+
+    Changes to the stylesheet affect all linked HTML documents
+*/
+
+p {
+  border: 2px solid #333;
+}
+
+/* Element Selectors
+
+    These are used to target and style specific elements based on their element type or tag name
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+}
+
+button {
+  background-color: rgb(41, 156, 140);
+  color: rgb(197, 206, 31);
+  font-weight: bolder;
+  padding: 10px;
+}
+
+/* Class and ID Selectors 
+
+    These are used to target and style with greater specificity and precision than element selectors
+
+    Class Selectors
+
+    They use the value of the class attribute and a . for selecting it
+
+    Multiple elements can share the same class, and a single element can have multiple classes separated by spaces
+*/
+
+.button_class {
+  background-color: coral;
+}
+
+.button_class2 {
+  font-family: monospace;
+}
+
+/* ID Selector
+
+    Uses a # and the value of the id attribute of an element
+
+    ID is the most specific since IDs should only assigned to a single element
+*/
+
+#unique_button {
+  margin: 20px;
+  padding: 30px;
+  font-size: larger;
+}
+
+/* Sibling Selectors
+
+    Used for styling elements that have the same parent and are located immediately before or after another specified element
+
+    These selectors use the + and ~ symbols to target elements based on their relationship to a reference element
+
+    Adjacent Sibling Selector +
+*/
+
+/* Select and style the LI element immediately following the one with class highlight */
+
+.highlight + li {
+  background-color: yellow;
+}
+
+/* General Sibling Selector
+    Select and style elements following the one with class "highlight"
+*/
+
+.highlight ~ li {
+  color: red;
+}
+
+/* Advanced Selectors */
+
+/* Attribute Selectors 
+
+    Allows you to select elements based on their attribute and attribute values
+*/
+
+input[type="text"] {
+  border: 10px solid rgb(41, 156, 140);
+}
+
+/* Pseudo-Classes
+    These pseudo-classes allow you to style elements when they are changed through some interaction
+*/
+
+button:hover {
+  background-color: rgb(20, 63, 57);
+}
+
+button:active {
+  background-color: rgb(113, 39, 148);
+}
+
+li:hover {
+  background-color: yellow;
+}
+
+input:focus {
+  border-color: red;
+}
+
+img {
+    width: 800px;
+}
+
+@media (max-width: 800px) {
+  img {
+    width: 90vw;
+    border: 20px solid red
+  }
+}
+
+/* @media (min-width: 800px){ */
+/* } */
