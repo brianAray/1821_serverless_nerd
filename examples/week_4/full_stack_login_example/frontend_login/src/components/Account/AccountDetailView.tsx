@@ -2,7 +2,9 @@ import React from 'react'
 
 function AccountDetailView(props: any) {
   return (
-    <div>AccountDetailView</div>
+    <>
+        {props.user && <p>{props.user.name}</p>}
+    </>
   )
 }
 

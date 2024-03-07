@@ -6,8 +6,10 @@ function LoginInput(props: any) {
 
   function handleSubmit(event: any) {
     event.preventDefault();
-    alert(username + password);
+    // alert(username + password);
+    props.updateUser({ username, password });
   }
+  
   return (
     <form onSubmit={handleSubmit}>
       <input

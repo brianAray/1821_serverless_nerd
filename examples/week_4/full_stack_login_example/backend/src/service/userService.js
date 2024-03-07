@@ -9,7 +9,8 @@ async function loginUser(username, password) {
     const data = await userDao.getUserByUsername(username);
     if (data) {
       if (data.password === password) {
-        return data;
+        let formattedData = await formatUserData(data);
+        return formattedData;
       } else {
         throw new Error("Incorrect Username or Password");
       }
@@ -19,6 +20,15 @@ async function loginUser(username, password) {
   } catch (error) {
     throw error;
   }
+}
+
+async function formatUserData(data) {
+  const { username, name, user_id } = data;
+  return {
+    username,
+    name,
+    id: user_id,
+  };
 }
 
 module.exports = {
