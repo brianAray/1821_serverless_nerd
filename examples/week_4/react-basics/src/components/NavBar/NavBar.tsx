@@ -1,9 +1,13 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
-function NavBar() {
+function NavBar(props: any) {
+  let counter = useSelector((state: any) => state.counter.value);
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      {counter}
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
           React Demo
@@ -21,10 +25,16 @@ function NavBar() {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              {/* <a className="nav-link" aria-current="page" href="/">
-                Components Demo
-              </a> */}
+            {props.pathArray.map((obj: any, index: any) => {
+              return (
+                <li key={index}>
+                  <Link className="nav-link" to={obj.path}>
+                    {obj.buttonName}
+                  </Link>
+                </li>
+              );
+            })}
+            {/* <li>
               <Link className="nav-link" to="/">
                 Components Demo
               </Link>
@@ -44,6 +54,16 @@ function NavBar() {
                 Props Demo
               </Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/hooks">
+                Hooks Demo
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/poke">
+                Poke Demo
+              </Link>
+            </li>  */}
           </ul>
         </div>
       </div>
