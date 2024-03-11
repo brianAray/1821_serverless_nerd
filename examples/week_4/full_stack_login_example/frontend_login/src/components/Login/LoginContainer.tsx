@@ -4,7 +4,7 @@ import AccountDetailView from "../Account/AccountDetailView";
 import axios from "axios";
 import AccountContainer from "../Account/AccountContainer";
 
-const URL = `http://localhost:4000`;
+const URL = `http://3.134.90.35:4000`;
 
 function LoginContainer() {
   const [user, setUser] = useState({} as any);
@@ -33,8 +33,8 @@ function LoginContainer() {
 
   return (
     <>
-      <LoginInput updateUser={updateUser}/>
-      <AccountContainer user={user}/>
+      <LoginInput updateUser={updateUser} />
+      <AccountContainer user={user} />
     </>
   );
 }
