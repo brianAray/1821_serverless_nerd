@@ -19,11 +19,11 @@ https://docs.aws.amazon.com/codedeploy/latest/userguide/codedeploy-agent-operati
 	- Do not use NVM as it will not be available to the code deploy agent
 	- Include in the security group access to the EC2 web server and the port for you app
 4. Create the Code Commit Repo for the express app
-4.1 Create an application
+5. Create an application
 	- Go to CodeDeploy
 	- Create an application
 		- Compute Platform: EC2/ on-premises
-4.2 Create a Deployment Group
+6. Create a Deployment Group
 	- Create a service role for the code deploy to read the tags of the EC2 instance
 	- Choose the code deploy service
 	- Now create the deployment group in the application
@@ -33,16 +33,16 @@ https://docs.aws.amazon.com/codedeploy/latest/userguide/codedeploy-agent-operati
 		- Choose the tag you attached to the EC2
 		- If you did not add an additional one, use the name tag
 	- Disable load balancer
-5. Create the pipeline
-6. Add the code commit repo to the source stage
-7. Add a build stage
+7. Create the pipeline
+8. Add the code commit repo to the source stage
+9. Add a build stage
 	- Code Build
 	- Create Code Project
 		- We use the code project to run npm install
 		- OS: Ubuntu
 		- Image: 5.0
 		- use buildspec file
-8. Add deploy stage
+10. Add deploy stage
 	- Deploy Provider: Code Deploy
 	- Assign the application we created
 	- Choose the deployment group created for that application
