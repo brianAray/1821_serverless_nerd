@@ -1,0 +1,6 @@
+# Cloud Native
+Cloud Native is a term used to describe a set of principles and technologies for building and running modern applications and services. The goal of Cloud Native is to take advantage of the benefits of cloud computing, such as scalability, agility, and cost-effectiveness, to build and run applications that are highly scalable, highly available, and secure.
+
+Cloud Native applications and services are designed to run on cloud infrastructure, such as AWS, Microsoft Azure, and Google Cloud. Typically, some form of "microservices" architecture is employed, which essentially describes the process of breaking down a large, monolithic appliation into smaller, independent, and loosely coupled services that can be developed, deployed, and scaled independently.
+
+"Serverless" is a paradigm in which the management of servers is completely eliminated. Instead, the cloud provider, such as AWS, manages the servers behind the scenes, while all we need to worry about is the development of each service that we deploy. Even the concept of scalability is no longer required to be controlled by us, because AWS will take care of the scaling for us. "Serverless" is not truly "server-free", because we are still definitely using servers behind the scenes for all of the processing. But, it is an abstraction of servers.
