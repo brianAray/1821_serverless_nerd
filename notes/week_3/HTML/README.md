@@ -4,7 +4,7 @@ HTML stands for Hypertext Markup Language. It is the standard markup language us
 
 HTML is used in conjuction with other languages like JavaScript and CSS to create dynamic and interactive web pages.
 
-A web browser has an interpreter to convert our markup language into pixels to be displayed on the browser. HTML is the markup language that the itnerpreter understands, and we can write it in an established structure that the browser expects. The language is quite forgiving, in that the browser will attempt to fix any broken HTML in order for it to still be interpretable.
+A web browser has an interpreter to convert our markup language into pixels to be displayed on the browser. HTML is the markup language that the interpreter understands, and we can write it in an established structure that the browser expects. The language is quite forgiving, in that the browser will attempt to fix any broken HTML in order for it to still be interpretable.
 
 When we are writing HTML, we are defining the structure of the webpage in large blocks called elements that the web page will use and convert into something that can be displayed. An element consists of 3 parts:
 
@@ -16,15 +16,15 @@ When we are writing HTML, we are defining the structure of the webpage in large 
 
 A denotation of the start and end of a block of data
 
-Let's use the <p> tag which defines a paragraph. If we want a paragraph to appear on the webpage, we would write in the file
+Let's use the `<p>` tag which defines a paragraph. If we want a paragraph to appear on the webpage, we would write in the file
 
 `<p></p>`
 
-This line begins and ends with the same syntax <p>, the difference being the / that is added to the closing tag. The / tells the interpreter that the element is finished, and so any tag that has a / in front is referred to as a closing tag.
+This line begins and ends with the same syntax `<p>`, the difference being the / that is added to the closing tag. The / tells the interpreter that the element is finished, and so any tag that has a / in front is referred to as a closing tag.
 
 ## Content
 
-Literal text or other elements contianed between an elements opening and closing tag
+Literal text or other elements contained between an element's opening and closing tag.
 
 `<p>Hello</p>`
 
@@ -38,7 +38,7 @@ No the webpage would render this as a paragraph with text that says "Hello". A p
 - `<body>`: Defines the body of the document, which contains the content that is displayed in the browser
 - `<p>`: Defines a paragraph
 - `<h1>`: Defines a level 1 heading, and goes up to 6
-- `<img>`: Defines an iamge
+- `<img>`: Defines an image
 - `<a>`: Defines a hyperlink
 - `<div>`: Defines a section of the document
 - `<span>`: Defines a small section of the document, used to apply styles to specific parts of the text
@@ -46,9 +46,9 @@ No the webpage would render this as a paragraph with text that says "Hello". A p
 
 ## Semantic Markup
 
-The practice of using tags with special meaning in their specifically designed purpose in order to convey the meaning of the webpage to assitive technology
+The practice of using tags with special meaning in their specifically designed purpose in order to convey the meaning of the webpage to assistive technology
 
-With CSS, you can format any tag to look like anything you want, even other tags. By using the correct semantic tags, it doesn't affect what is displayed on the screen too much, it simply groups it together in a logical and readable format for the developers and any users that use assitive technologies to interact with a browser.
+With CSS, you can format any tag to look like anything you want, even other tags. By using the correct semantic tags, it doesn't affect what is displayed on the screen too much, it simply groups it together in a logical and readable format for the developers and any users that use assistive technologies to interact with a browser.
 
 ## HTML DOM
 
@@ -92,7 +92,7 @@ The three main tags compose the document. The structure should be maintained, an
 
 Stands for the Document Object Model. A representation of the HTML document in memory. It is generated and can be manipulated by Web API's to change the look of the page as it is being viewed.
 
-When the page gets rendered by the browser, the DOM is used to represent our page behind the secenes gets added to it. Typically we use JavaScript to manipulate the DOM, but we can use any language as any Web API can interact with the DOM.
+When the page gets rendered by the browser, the DOM is used to represent our page behind the scenes gets added to it. Typically we use JavaScript to manipulate the DOM, but we can use any language as any Web API can interact with the DOM.
 
 
 ## Elements and Attributes
@@ -105,7 +105,7 @@ An opening tag, a closing tag, and all the content in between them.
 ### Attribute
 A key value pair used to set various properties of a tag. These are always set in the opening tag.
 
-The terms tag and element are often used interchangeably, which is confusing. The functionaltiy and structure is determined by the tag, but the entirety from start to finish is referred to as the element.
+The terms tag and element are often used interchangeably, which is confusing. The functionality and structure is determined by the tag, but the entirety from start to finish is referred to as the element.
 
 Anatomy of a HTML Element
 
@@ -114,7 +114,7 @@ Anatomy of a HTML Element
 
 <p> is the opening tag
 class="nice" is the attribute and its value
-Hello Worl is the enclosed text content
+Hello World is the enclosed text content
 </p> is the closing tag
 ```
 
@@ -251,7 +251,7 @@ The select element is used to create a drop-down list. It is most often used in 
 The name attribute is needed to reference the form data after the form is submitted. If you omit the name attribute, no data from the drop down list will be submitted.
 
 The id attribute is needed to associate the drop-down list with a label.
-The option tags inisde the select element defines the available options in the drop-down list.
+The option tags inside the select element defines the available options in the drop-down list.
 
 ```html
 <form>
@@ -289,11 +289,11 @@ There is also the reset button, that will reset the form data and will display a
 - action
     - The action attribute indicates where the form data will be processed. Typically the URL of the server
 - target
-    - Used to speicfy whether the submitted results will open the current window, a new tab, or new frame. The default value is "self" which is the same window. For a new window, use "blank"
+    - Used to specify whether the submitted results will open the current window, a new tab, or new frame. The default value is "self" which is the same window. For a new window, use "blank"
 - name
-    - should be provided for each input element. It is not required, but hte value provides a label for the data once the form is submitted. If it is not specified in an input field then the data will not be sent from that field
+    - should be provided for each input element. It is not required, but the value provides a label for the data once the form is submitted. If it is not specified in an input field then the data will not be sent from that field
 - method
-    - Used to speicify the HTTP method used to send data while submitting forms, only two options GET and POST
+    - Used to specify the HTTP method used to send data while submitting forms, only two options GET and POST
 - value
     - Specifies an initial value for the input field. It also serves as the attribute when providing a button a label
 - placeholder
