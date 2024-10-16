@@ -15,6 +15,8 @@
 https://docs.aws.amazon.com/codedeploy/latest/userguide/codedeploy-agent-operations-install-ubuntu.html
 	- sudo apt update
 	- sudo apt install nodejs
+ 		- `curl -sL https://deb.nodesource.com/setup_20.x | sudo bash -`
+		- `sudo apt -y install nodejs`
 	- sudo apt install npm
 	- Do not use NVM as it will not be available to the code deploy agent
 	- Include in the security group access to the EC2 web server and the port for you app
